@@ -69,10 +69,20 @@ void init(Tape* tape){
 
 void release(Tape* tape){
     Chunk* c;
-    for(c = tape->head.next; c; c = c->next)
-        free(c);
-    for(c = tape->head.prev; c; c = c->prev)
-        free(c);
+    Chunk* popped;
+
+    c = tape->head.next;
+    while(c){
+        popped = c;
+        c = c->next;
+        free(popped);
+    }
+    c = tape->head.prev;
+    while(c){
+        popped = c;
+        c = c->next;
+        free(popped);
+    }
 }
 
 int shift_left(Tape* tape){
