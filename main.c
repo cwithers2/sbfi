@@ -80,7 +80,7 @@ void release(Tape* tape){
     c = tape->head.prev;
     while(c){
         popped = c;
-        c = c->next;
+        c = c->prev;
         free(popped);
     }
 }
