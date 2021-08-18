@@ -1,5 +1,8 @@
 # sbfi
 A simple [brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter.
+
+_Brainfuck_ is an esoteric programming language. Focused on **extreme** minimialism, _brainfuck_ is composed of eight(!) commands to operate on a (practically) infinite tape of mutable, integral cells.
+
 ## Dependencies
 - _None_
 
